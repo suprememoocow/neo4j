@@ -12,14 +12,14 @@ wrapper.java.initmemory=${JVM_INIT_MEMORY-2048}
 wrapper.java.maxmemory=${JVM_MAX_MEMORY-12228}
 keep_logical_logs=false
 remote_shell_enabled=true
-remote_shell_host=$HOSTNAME
+remote_shell_host=0.0.0.0
 EOD
 
 cat <<EOD > $NEO4J_SERVER_PROPS
 org.neo4j.server.database.location=/opt/data/graph.db
 org.neo4j.server.db.tuning.properties=conf/neo4j.properties
-org.neo4j.server.webserver.address=$HOSTNAME
-dbms.security.auth_enabled==${AUTH_ENABLED-false}
+org.neo4j.server.webserver.address=0.0.0.0
+dbms.security.auth_enabled=${AUTH_ENABLED-false}
 org.neo4j.server.webserver.port=7474
 org.neo4j.server.webserver.https.enabled=false
 # org.neo4j.server.webserver.https.port=7473
