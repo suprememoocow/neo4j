@@ -5,6 +5,12 @@ Neo4j is a highly scalable, robust (fully ACID) native graph database. Neo4j is 
 
 With the Dockerfile on repository you've a docker neo4j community edition image ready to go.
 
+### Environment variables
+
+ * JVM_INIT_MEMORY: value in MB. default 2GB
+ * JVM_MAX_MEMORY: value in MB. default 12GB
+ * AUTH_ENABLED: `true` or `false`. Defaults to false
+
 ### Setup
 
 1. Execute this command:

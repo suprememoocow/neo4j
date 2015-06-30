@@ -21,8 +21,6 @@ RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 # expose REST and shell server ports
 EXPOSE 7474
 EXPOSE 1337
-EXPOSE 5001
-EXPOSE 6001
 
 WORKDIR /
 
